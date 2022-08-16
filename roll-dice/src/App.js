@@ -5,15 +5,9 @@ import RollDice from './rollDice';
 
 function App() {
   return (
-    <div >
-
-     <div className='container'>
-      <Die/>
-      </div>
-      <div className='App' >
+      <div className='App'>
           <RollDice/>
       </div>
-    </div>
   );
 }
 

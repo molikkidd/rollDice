@@ -7,11 +7,10 @@ const Die = () => {
     return (
         <div className='diceContainer'>
             <div>
-            <FontAwesomeIcon icon={faDiceOne} size="10x" />
+            <FontAwesomeIcon icon={faDiceOne} size="10x" color='orange'/>
             </div>
-            
             <div>
-            <FontAwesomeIcon icon={faDiceFour} size="10x" />
+            <FontAwesomeIcon icon={faDiceFour} size="10x" color='orange'/>
             </div>
         </div>
     );
