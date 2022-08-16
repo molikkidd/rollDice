@@ -1,9 +1,19 @@
 import React, {useState} from 'react'
 import Die from './Die'
+import { faDiceOne, faDiceTwo, faDiceThree, faDiceFour, faDiceFive, faDiceSix } from '@fortawesome/free-solid-svg-icons'
 
 export default function RollDice() {
 
-const [dieOne, setDieOne] = useState(null);
+const dieOptions = [
+  faDiceOne, 
+  faDiceTwo, 
+  faDiceThree, 
+  faDiceFour, 
+  faDiceFive, 
+  faDiceSix
+]
+
+const [dieOne, setDieOne] = useState(dieOptions);
 const [dieTwo, setDieTwo] = useState(null);
 
 
