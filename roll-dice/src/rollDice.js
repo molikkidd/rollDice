@@ -13,19 +13,28 @@ const dieOptions = [
   faDiceSix
 ]
 
-const [dieOne, setDieOne] = useState(dieOptions);
-const [dieTwo, setDieTwo] = useState(null);
+const [dieOne, setDieOne] = useState(null);
+const [dieTwo, setDieTwo] = useState(faDiceOne);
 
+let min = 0;
+let max = dieOptions.length
+  
 
 const roll = () => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  let randomOne = Math.floor(Math.random() * (max - min) + min);
+  let randomTwo = Math.floor(Math.random() * (max - min) + min);
 
+  setDieTwo(dieOptions[randomOne])
+  setDieOne(dieOptions[randomTwo])
 }
 
   return (
     <div>
         <Die dieOne={dieOne} dieTwo={dieTwo}/>
         <div className='diceContainer'>
-            <button>Roll Dice!</button>
+            <button onClick={roll}>Roll Dice!</button>
         </div>
     </div>
   )
